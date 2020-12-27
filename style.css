@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /*La propriété scroll-behavior définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.*/
+}
+
+
+/* //////////////////// SECTION BANNER //////////////////////// */
+
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/bg.jpg);
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2 {
+    font-size: 5em;
+    color: #ffffff;
+}
+
+.banner .content p {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.btn {
+    font-size: 1em;
+    color: #ffffff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    letter-spacing: 6px;
+}
+
+
+/* FIN section banner  */
+
+
+/* /////////// NAVIGATION + LOGO ////////////////////////// */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 11111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+/* nab qui devient blanc au scroll avec le js*/
+
+header.sticky {
+    background: #ffffff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header.sticky .logo {
+    color: #111111;
+}
+
+header .logo span {
+    color: #ff0157;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+header.sticky .navigation li a {
+    color: #111111;
+}
+
+header .navigation li a:hover {
+    color: #ff0157;
+}
+
+
+/* FIN navigation + logo  */
+
+
+/* //////////////////// SECTION ABOUT //////////////////////// */
+
+section {
+    padding: 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+.titleText {
+    color: #111111;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.titleText span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row .col50 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*object-fit définit la façon dont le contenu d'un élément 
+    remplacé (<img> ou <video> par exemple) 
+    doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur*/
+    /*cover Le contenu remplacé est dimensionné pour maintenir son ratio 
+    d'affichage tout en remplissant toute la boîte de contenu. 
+    La taille réelle est calculée pour couvrir la zone décrite par la hauteur 
+    et la largeur de l'élément. Si les ratios de l'objet 
+    et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
+}
+
+
+/* FIN section about  */
