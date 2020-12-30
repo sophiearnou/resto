@@ -18,27 +18,28 @@
 <body>
     <header>
         <a href="#" class="logo">Phuket Thai <span>Food</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
         <ul class="navigation">
-            <li><a href="#banner">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#expert">Expert</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#banner" onclick="toggleMenu();">Accueil</a></li>
+            <li><a href="#about" onclick="toggleMenu();">À propos</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#expert" onclick="toggleMenu();">Équipe</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu();">Témoignages</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
     <section class="banner" id="banner">
         <div class="content">
-            <h2><span class="red">Always</span><span> Choose </span><span class="blue"> Good</span></h2>
-            <p>Cuisine traditionnelle thailandaise.<br>(plat uniquement a emporter),<br> nous cuisinons uniquement avec des les légumes frais</p>
-            <a href="#" class="btn">Our Menu</a>
+            <h2><span class="red">Cuisine</span><span> traditionnelle </span><span class="blue"> thailandaise</span></h2>
+            <p>Plat uniquement a emporter,<br> nous cuisinons uniquement avec des les légumes frais</p>
+            <a href="#" class="btn">Menu</a>
         </div>
     </section>
 
     <section class="about" id="about">
         <div class="row">
             <div class="col50">
-                <h2 class="titleText"><span class="red">A</span>bout Us</h2>
+                <h2 class="titleText"><span class="red">À</span> propos</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla veritatis nostrum, voluptas eveniet, accusamus nisi quidem dolorum vel unde quos quibusdam error qui, illum amet atque id ab quasi aliquam?<br><br>Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Itaque eaque fugiat culpa laboriosam animi sed, suscipit repellat aliquid quia minima dolores quidem praesentium veritatis cupiditate et veniam, voluptatem eveniet vero?</p>
             </div>
@@ -51,7 +52,7 @@
     </section>
     <section class="menu" id="menu">
         <div class="title">
-            <h2 class="titleText">Our <span class="red">M</span>enu</h2>
+            <h2 class="titleText"><span class="red">M</span>enu</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
         <div class="content">
@@ -106,13 +107,13 @@
 
         </div>
         <div class="title">
-            <a href="#" class="btn">View All</a>
+            <a href="#" class="btn">voir tous</a>
         </div>
     </section>
 
     <section class="expert" id="expert">
         <div class="title">
-            <h2 class="titleText">Our Kitchen <span class="red">E</span>xpert</h2>
+            <h2 class="titleText">L' <span class="red">É</span>quipe</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
         <div class="content">
@@ -121,7 +122,7 @@
                     <img src="images/expert1.jpg" alt="">
                 </div>
                 <div class="text">
-                    <h3>Someone Famous</h3>
+                    <h3>Jevta Bands</h3>
                 </div>
             </div>
             <div class="box">
@@ -129,7 +130,7 @@
                     <img src="images/expert2.jpg" alt="">
                 </div>
                 <div class="text">
-                    <h3>Someone Famous</h3>
+                    <h3>Tommy Famo</h3>
                 </div>
             </div>
             <div class="box">
@@ -137,22 +138,14 @@
                     <img src="images/expert3.jpg" alt="">
                 </div>
                 <div class="text">
-                    <h3>Someone Famous</h3>
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img src="images/expert4.jpg" alt="">
-                </div>
-                <div class="text">
-                    <h3>Someone Famous</h3>
+                    <h3>Sophie kane</h3>
                 </div>
             </div>
         </div>
     </section>
     <section class="testimonials" id="testimonials">
         <div class="title white">
-            <h2 class="titleText"><span class="red">They </span><span>Said</span> <span class="blue"> About Us</span></h2>
+            <h2 class="titleText"><span class="red">Ils  </span><span>disent</span><span class="blue"> de nous</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
         <div class="content">
@@ -190,10 +183,10 @@
     <section class="contact" id="contact">
         <div class="title">
             <h2 class="titleText"><span class="red">C</span>ontact</h2>
-            <p>1 rte Hussigny, 54920 Villers-la-montagne. Tel.: 06 26 39 80 81</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="contactForm">
-            <h3>Send <span class="red"> Message</span></h3>
+            <h3>Envoyer <span class="red"> Un Message</span></h3>
             <div class="inputBox">
                 <input type="text" placeholder="Name">
             </div>
@@ -208,6 +201,10 @@
             </div>
         </div>
     </section>
+    <div class="tel">
+        <p> 1 route de Hussigny, 54920 Villers la Montagne.<span class="red"> Tel. : 06 26 39 80 81</span> </p>
+
+    </div>
 
     </script>
     <script src="script.js"></script>

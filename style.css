@@ -419,3 +419,125 @@
             cursor: pointer;
         }
         /* FIN section contact  */
+        
+        .tel {
+            padding: 8px 40px;
+            border-top: 1px solid rgba(0, 0, 0, .1);
+            text-align: center;
+        }
+        
+        .tel p {
+            color: #192885;
+            font-weight: 600;
+        }
+        
+        .tel p span.red {
+            color: rgb(255, 1, 87);
+        }
+        /* /////////////MEDIA//////////// */
+        
+        @media (max-width: 1024px) {
+            header,
+            header.sticky {
+                padding: 10px 20px;
+            }
+            header .logo {
+                color: #ffffff;
+                font-size: 1.3em;
+            }
+            /*MENU MOBILE (menuToggle)*/
+            header .navigation {
+                display: none;
+            }
+            header .navigation.active {
+                width: 100%;
+                height: calc(100% - 60px);
+                position: fixed;
+                top: 60px;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: #fff;
+            }
+            header .navigation li {
+                margin-left: 0;
+            }
+            header .navigation li a {
+                color: #111;
+                font-size: 1.6em;
+            }
+            .menuToggle {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                background: url(images/menu.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 30px;
+                cursor: pointer;
+            }
+            .menuToggle.active {
+                background: url(images/close.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 30px;
+            }
+            header.sticky .menuToggle {
+                filter: invert(1);
+            }
+            /* fin menu mobile */
+            section {
+                padding: 20px;
+            }
+            .banner .content h2 {
+                font-size: 2.4em;
+                line-height: 1.3em;
+            }
+            .row {
+                flex-direction: column;
+            }
+            .row .col50 {
+                position: relative;
+                width: 100%;
+            }
+            .row .col50 .imgBx {
+                height: 300px;
+                margin-top: 20px;
+            }
+            .menu .content {
+                margin-top: 20px;
+            }
+            .menu .content .box {
+                margin: 10px;
+                box-shadow: 0 3px 22px rgba(0, 0, 0, 0.08);
+            }
+            .menu .content .box .imgBx {
+                height: 260px;
+            }
+            .title {
+                text-align: center;
+            }
+            .titleText {
+                font-size: 1.8em;
+                line-height: 1.5em;
+            }
+            .expert .content {
+                margin-top: 20px;
+            }
+            .expert .content .box {
+                margin: 10px;
+            }
+            .testimonials .content {
+                margin-top: 20px;
+            }
+            .testimonials .content .box {
+                margin: 10px;
+                padding: 20px;
+            }
+            .contactForm {
+                padding: 35px 40px;
+                margin: 20px 0 30px 0;
+            }
+        }
