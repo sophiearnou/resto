@@ -1,549 +1,694 @@
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-            /*La propriété scroll-behavior définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.*/
-        }
-        /* //////////////////// SECTION BANNER //////////////////////// */
-        
-        p {
-            font-weight: 300;
-            color: #111;
-        }
-        
-        .banner {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: url(images/bg.jpg);
-            background-size: cover;
-        }
-        
-        .banner .content {
-            max-width: 900px;
-            text-align: center;
-        }
-        
-        .banner .content h2 {
-            font-size: 5em;
-            color: #ffffff;
-        }
-        
-        .banner span.red {
-            color: rgb(255, 1, 87);
-        }
-        
-        .banner span.blue {
-            color: #192885;
-        }
-        
-        .banner .content p {
-            font-size: 1em;
-            color: #ffffff;
-        }
-        
-        .btn {
-            font-size: 1em;
-            color: #ffffff;
-            background: rgb(255, 1, 87);
-            display: inline-block;
-            padding: 10px 40px;
-            margin-top: 20px;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: 0.5s;
-        }
-        
-        .btn:hover {
-            letter-spacing: 6px;
-        }
-        /* FIN section banner  */
-        /* /////////// NAVIGATION + LOGO ////////////////////////// */
-        
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 40px 100px;
-            z-index: 11111;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.5s;
-        }
-        /* nab qui devient blanc au scroll avec le js*/
-        
-        header.sticky {
-            background: #ffffff;
-            padding: 10px 100px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-        
-        header .logo {
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 2em;
-            text-decoration: none;
-        }
-        
-        header.sticky .logo {
-            color: #192885;
-        }
-        
-        header .logo span {
-            color: rgb(255, 1, 87);
-        }
-        
-        header .navigation {
-            position: relative;
-            display: flex;
-        }
-        
-        header .navigation li {
-            list-style: none;
-            margin-left: 30px;
-        }
-        
-        header .navigation li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 300;
-        }
-        
-        header.sticky .navigation li a {
-            color: #192885;
-        }
-        
-        header .navigation li a:hover {
-            color: rgb(255, 1, 87);
-            font-weight: 500;
-        }
-        /* FIN navigation + logo  */
-        /* //////////////////// SECTION ABOUT //////////////////////// */
-        
-        section {
-            padding: 30px 100px;
-        }
-        
-        .row {
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .row .col50 {
-            position: relative;
-            width: 48%;
-        }
-        
-        .titleText {
-            color: #192885;
-            font-size: 2em;
-            /*font-weight: 300;*/
-        }
-        
-        .titleText span {
-            font-weight: 700;
-            font-size: 1.5em;
-        }
-        
-        .titleText span.red {
-            color: rgb(255, 1, 87);
-        }
-        
-        .titleText span.blue {
-            color: #192885;
-        }
-        
-        .row .col50 .imgBx {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .row .col50 .imgBx img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /*object-fit définit la façon dont le contenu d'un élément 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /*La propriété scroll-behavior définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.*/
+}
+
+
+/* //////////////////// SECTION BANNER //////////////////////// */
+
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/bg.jpg);
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2 {
+    font-size: 5em;
+    color: #ffffff;
+}
+
+.banner span.red {
+    color: rgb(255, 1, 87);
+}
+
+.banner span.blue {
+    color: #192885;
+}
+
+.banner .content p {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.btn {
+    font-size: 1em;
+    color: #ffffff;
+    background: rgb(255, 1, 87);
+    display: inline-block;
+    padding: 10px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn:hover {
+    letter-spacing: 6px;
+}
+
+
+/* FIN section banner  */
+
+
+/* /////////// NAVIGATION + LOGO ////////////////////////// */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 11111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+/* nab qui devient blanc au scroll avec le js*/
+
+header.sticky {
+    background: #ffffff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header.sticky .logo {
+    color: #192885;
+}
+
+header .logo span {
+    color: rgb(255, 1, 87);
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+header.sticky .navigation li a {
+    color: #192885;
+}
+
+header .navigation li a:hover {
+    color: rgb(255, 1, 87);
+    font-weight: 500;
+}
+
+
+/*========== BACK TO TOP BTN ==========*/
+
+.back-to-top {
+    bottom: 6rem;
+    right: 1rem;
+}
+
+
+/*========== END BACK TO TOP BTN ==========*/
+
+
+/* FIN navigation + logo  */
+
+
+/* //////////////////// SECTION ABOUT //////////////////////// */
+
+section {
+    padding: 30px 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+.titleText {
+    color: #192885;
+    font-size: 2em;
+    /*font-weight: 300;*/
+}
+
+.titleText span {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.titleText span.red {
+    color: rgb(255, 1, 87);
+}
+
+.titleText span.blue {
+    color: #192885;
+}
+
+.row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row .col50 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /*object-fit définit la façon dont le contenu d'un élément 
     remplacé (<img> ou <video> par exemple) 
     doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur*/
-            /*cover Le contenu remplacé est dimensionné pour maintenir son ratio 
+    /*cover Le contenu remplacé est dimensionné pour maintenir son ratio 
     d'affichage tout en remplissant toute la boîte de contenu. 
     La taille réelle est calculée pour couvrir la zone décrite par la hauteur 
     et la largeur de l'élément. Si les ratios de l'objet 
     et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
-        }
-        /* FIN section about  */
-        /* /////////// SECTION MENU ////////////////////////// */
-        
-        .banner {
-            min-height: 80vh;
-        }
-        
-        .title {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        
-        .menu .content {
-            display: flex;
-            justify-content: center;
-            flex-direction: row-reverse;
-            flex-wrap: wrap;
-            /*La propriété flex-wrap indique si les éléments flexibles 
+}
+
+
+/* FIN section about  */
+
+
+/* /////////// SECTION MENU ////////////////////////// */
+
+.banner {
+    min-height: 80vh;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    /*La propriété flex-wrap indique si les éléments flexibles 
     sont contraints à être disposés sur une seule ligne ou 
     s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. 
     Si le retour à la ligne est autorisé, la propriété permet également 
     de contrôler la direction dans laquelle les lignes sont empilées.*/
-            margin-top: 40px;
-        }
-        
-        .menu .content .box {
-            width: 340px;
-            margin: 20px;
-            border: 15px solid #fff;
-            box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
-        }
-        
-        .menu .content .box .imgBx {
-            position: relative;
-            width: 100%;
-            height: 300px;
-        }
-        
-        .menu .content .box .imgBx img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .menu .content .box .text {
-            padding: 15px 0 5px;
-        }
-        
-        .menu .content .box .text h3 {
-            font-weight: 400;
-            color: #111111;
-        }
-        /* FIN section menu  */
-        /* /////////// SECTION EXPERT ////////////////////////// */
-        
-        .expert .content {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            /*La propriété flex-wrap indique si les éléments flexibles 
+    margin-top: 40px;
+}
+
+.menu .content .box {
+    width: 340px;
+    margin: 20px;
+    border: 15px solid #fff;
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.menu .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+
+.menu .content .box .text {
+    padding: 15px 0 5px;
+}
+
+.menu .content .box .text h3 {
+    font-weight: 400;
+    color: #111111;
+    text-align: center;
+}
+
+
+/* FIN section menu  */
+
+
+/* /////////// SECTION EXPERT ////////////////////////// */
+
+.expert .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*La propriété flex-wrap indique si les éléments flexibles 
     sont contraints à être disposés sur une seule ligne ou 
     s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. 
     Si le retour à la ligne est autorisé, la propriété permet également 
     de contrôler la direction dans laquelle les lignes sont empilées.*/
-            flex-direction: row;
-            margin-top: 40px;
-        }
-        
-        .expert .content .box {
-            width: 250px;
-            margin: 15px;
-        }
-        
-        .expert .content .box .imgBx {
-            position: relative;
-            width: 100%;
-            height: 300px;
-        }
-        
-        .expert .content .box .imgBx img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .expert .content .box .text {
-            padding: 15px 0 5px;
-        }
-        
-        .expert .content .box .text h3 {
-            font-weight: 400;
-            color: #111111;
-        }
-        /* FIN section expert  */
-        /* /////////// SECTION TESTIMONIALS ////////////////////////// */
-        
-        .testimonials {
-            /*img de fond pour la section*/
-            background: url(images/bg2.jpg);
-            background-size: cover;
-            /*cover Le contenu remplacé est dimensionné pour maintenir son ratio 
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.expert .content .box {
+    width: 250px;
+    margin: 15px;
+}
+
+.expert .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.expert .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.expert .content .box .text {
+    padding: 15px 0 5px;
+}
+
+.expert .content .box .text h3 {
+    font-weight: 400;
+    color: #111111;
+    text-align: center;
+}
+
+
+/* FIN section expert  */
+
+
+/* /////////// SECTION TESTIMONIALS ////////////////////////// */
+
+.testimonials {
+    /*img de fond pour la section*/
+    background: url(images/bg2.jpg);
+    background-size: cover;
+    /*cover Le contenu remplacé est dimensionné pour maintenir son ratio 
     d'affichage tout en remplissant toute la boîte de contenu. 
     La taille réelle est calculée pour couvrir la zone décrite par la hauteur 
     et la largeur de l'élément. Si les ratios de l'objet 
     et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
-        }
-        
-        .white .titleText,
-        .white p {
-            color: #ffffff;
-        }
-        
-        .testimonials .content {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            flex-direction: row;
-            margin-top: 40px;
-        }
-        
-        .testimonials .content .box {
-            /*dimension de la box et couleur*/
-            width: 340px;
-            margin: 20px;
-            padding: 40px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        
-        .testimonials .content .box .imgBx {
-            position: relative;
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            /*overflow permet de gérer la manière dont est rogné le contenu lorsque votre contenu 
+}
+
+.white .titleText,
+.white p {
+    color: #ffffff;
+}
+
+.testimonials .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.testimonials .content .box {
+    /*dimension de la box et couleur*/
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.testimonials .content .box .imgBx {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    /*overflow permet de gérer la manière dont est rogné le contenu lorsque votre contenu 
         est plus grand que la taille spécifiée de votre élément
         /*hidden cache tout ce qui dépasse de l'élément*/
-        }
-        
-        .testimonials .content .box .imgBx img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .testimonials .content .box .text {
-            text-align: center;
-        }
-        
-        .testimonials .content .box .text p {
-            color: #666666;
-            font-style: italic;
-        }
-        
-        .testimonials .content .box .text h3 {
-            margin-top: 20px;
-            color: rgb(255, 1, 87);
-            font-size: 1em;
-            font-weight: 600;
-        }
-        /* FIN section testimonials  */
-        /* /////////// SECTION CONTACT ////////////////////////// */
-        
-        .contact {
-            background: url(images/bg3.jpg);
-            background-size: cover;
-        }
-        
-        .contactForm {
-            padding: 75px 50px;
-            background: #fff;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin-top: 50px;
-        }
-        
-        .contactForm h3 {
-            color: #192885;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        
-        .contactForm h3 span.red {
-            color: rgb(255, 1, 87);
-        }
-        
-        .contactForm .inputBox {
-            position: relative;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        
-        .contactForm .inputBox input,
-        .contactForm .inputBox textarea {
-            width: 100%;
-            border: 1px solid #555555;
-            padding: 10px;
-            color: #111111;
-            outline: none;
-            font-size: 16px;
-            font-weight: 300;
-            resize: none;
-            /*resize: none; L'élément n'offre aucune méthode à l'utilisateur pour que celui-ci le redimensionne.*/
-        }
-        
-        .contactForm .inputBox input[type="submit"] {
-            font-size: 1em;
-            color: #ffffff;
-            background: rgb(255, 1, 87);
-            display: inline-block;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: 0.5s;
-            max-width: 100px;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-        }
-        /* FIN section contact  */
-        
-        .tel {
-            padding: 8px 40px;
-            border-top: 1px solid rgba(0, 0, 0, .1);
-            text-align: center;
-        }
-        
-        .tel p {
-            color: #192885;
-            font-weight: 600;
-        }
-        
-        .tel p span.red {
-            color: rgb(255, 1, 87);
-        }
-        /* /////////////MEDIA//////////// */
-        
-        @media (max-width: 1024px) {
-            header,
-            header.sticky {
-                padding: 10px 20px;
-            }
-            header .logo {
-                color: #ffffff;
-                font-size: 1.3em;
-            }
-            /*MENU MOBILE (menuToggle)*/
-            header .navigation {
-                display: none;
-            }
-            header .navigation.active {
-                width: 100%;
-                height: calc(100% - 60px);
-                position: fixed;
-                top: 60px;
-                left: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                background: #fff;
-            }
-            header .navigation li {
-                margin-left: 0;
-            }
-            header .navigation li a {
-                color: #111;
-                font-size: 1.6em;
-            }
-            .menuToggle {
-                position: relative;
-                width: 40px;
-                height: 40px;
-                background: url(images/menu.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 30px;
-                cursor: pointer;
-            }
-            .menuToggle.active {
-                background: url(images/close.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 30px;
-            }
-            header.sticky .menuToggle {
-                filter: invert(1);
-            }
-            /* fin menu mobile */
-            section {
-                padding: 20px;
-            }
-            .banner .content h2 {
-                font-size: 2.4em;
-                line-height: 1.3em;
-                margin-top: 30px;
-            }
-            .row {
-                flex-direction: column;
-            }
-            .row .col50 {
-                position: relative;
-                width: 100%;
-            }
-            .row .col50 .imgBx {
-                height: 300px;
-                margin-top: 20px;
-            }
-            .menu .content {
-                margin-top: 20px;
-            }
-            .menu .content .box {
-                margin: 10px;
-                box-shadow: 0 3px 22px rgba(0, 0, 0, 0.08);
-            }
-            .menu .content .box .imgBx {
-                height: 260px;
-            }
-            .title {
-                text-align: center;
-                margin-top: 30px;
-            }
-            .titleText {
-                font-size: 1.8em;
-                line-height: 1.5em;
-            }
-            .expert .content {
-                margin-top: 20px;
-            }
-            .expert .content .box {
-                margin: 10px;
-            }
-            .testimonials .content {
-                margin-top: 20px;
-            }
-            .testimonials .content .box {
-                margin: 10px;
-                padding: 20px;
-            }
-            .contactForm {
-                padding: 35px 40px;
-                margin: 20px 0 30px 0;
-            }
-        }
+}
+
+.testimonials .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials .content .box .text {
+    text-align: center;
+}
+
+.testimonials .content .box .text p {
+    color: #666666;
+    font-style: italic;
+}
+
+.testimonials .content .box .text h3 {
+    margin-top: 20px;
+    color: rgb(255, 1, 87);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+
+/* FIN section testimonials  */
+
+
+/* /////////// SECTION CONTACT ////////////////////////// */
+
+.contact {
+    background: url(images/bg3.jpg);
+    background-size: cover;
+}
+
+.contactForm {
+    padding: 75px 50px;
+    background: #fff;
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.contactForm h3 {
+    color: #192885;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contactForm h3 span.red {
+    color: rgb(255, 1, 87);
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    border: 1px solid #555555;
+    padding: 10px;
+    color: #111111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+    /*resize: none; L'élément n'offre aucune méthode à l'utilisateur pour que celui-ci le redimensionne.*/
+}
+
+.contactForm .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: #ffffff;
+    background: rgb(255, 1, 87);
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* FIN section contact  */
+
+.tel {
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+}
+
+.tel p {
+    color: #192885;
+    font-weight: 600;
+}
+
+.tel p span.red {
+    color: rgb(255, 1, 87);
+}
+
+
+/*========== ANIMATION ==========*/
+
+.left-to-right {
+    transform: translateX(-150%);
+    transition: 1s ease-in-out;
+}
+
+.left-to-right.start {
+    transform: translateX(0);
+}
+
+.right-to-left {
+    transform: translateX(150%);
+    transition: 1s ease-in-out;
+}
+
+.right-to-left.start {
+    transform: translateX(0);
+}
+
+.zoom {
+    transform: scale(0);
+    transition: .6s ease-in-out;
+}
+
+.zoom.start {
+    transform: unset;
+}
+
+.bottom-up {
+    transform: translateY(30%);
+    transition: .8s ease-in-out;
+}
+
+.bottom-up.start {
+    transform: translateY(0);
+}
+
+
+/*transition-delay indique la durée à attendre avant de débuter la transition qui s'applique pour un changement de propriété.*/
+
+.delay-2 {
+    transition-delay: .2s;
+}
+
+.delay-4 {
+    transition-delay: .4s;
+}
+
+.delay-6 {
+    transition-delay: .6s;
+}
+
+.delay-8 {
+    transition-delay: .8s;
+}
+
+.delay-10 {
+    transition-delay: .10s;
+}
+
+.delay-12 {
+    transition-delay: .12s;
+}
+
+
+/*========== END ANIMATION ==========*/
+
+
+/* /////////////MEDIA//////////// */
+
+@media (max-width: 1024px) {
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }
+    header .logo {
+        color: #ffffff;
+        font-size: 1.3em;
+    }
+    /*MENU MOBILE (menuToggle)*/
+    header .navigation {
+        display: none;
+    }
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 60px);
+        position: fixed;
+        top: 60px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .navigation li {
+        margin-left: 0;
+    }
+    header .navigation li a {
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(images/menu.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .menuToggle.active {
+        background: url(images/close.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+    }
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+    /*========== BACK TO TOP BTN ==========*/
+    .back-to-top {
+        position: fixed;
+        bottom: 70px;
+        right: 70px;
+        border-radius: 10px;
+        background-color: var(--primary-color);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        padding: .5rem;
+        z-index: 99;
+        display: none;
+    }
+    /*========== END BACK TO TOP BTN ==========*/
+    /* fin menu mobile */
+    section {
+        padding: 20px;
+    }
+    .banner .content h2 {
+        font-size: 2.4em;
+        line-height: 1.3em;
+        margin-top: 30px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        position: relative;
+        width: 100%;
+    }
+    .row .col50 .imgBx {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content {
+        margin-top: 20px;
+    }
+    .menu .content .box {
+        margin: 10px;
+        border-radius: 3rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .menu .content .box .imgBx {
+        height: 260px;
+    }
+    .title {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .titleText {
+        font-size: 1.8em;
+        line-height: 1.5em;
+    }
+    .expert .content {
+        margin-top: 20px;
+    }
+    .expert .content .box {
+        margin: 10px;
+    }
+    .testimonials .content {
+        margin-top: 20px;
+    }
+    .testimonials .content .box {
+        margin: 10px;
+        padding: 20px;
+    }
+    .contactForm {
+        padding: 35px 40px;
+        margin: 20px 0 30px 0;
+    }
+}
